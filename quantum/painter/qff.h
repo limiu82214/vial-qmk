@@ -48,7 +48,7 @@ _Static_assert(sizeof(qff_font_descriptor_v1_t) == (sizeof(qgf_block_header_v1_t
 #define QFF_GLYPH_WIDTH_BITS 6
 #define QFF_GLYPH_WIDTH_MASK ((1 << QFF_GLYPH_WIDTH_BITS) - 1)
 #define QFF_GLYPH_OFFSET_BITS 18
-#define QFF_GLYPH_OFFSET_MASK (((1 << QFF_GLYPH_OFFSET_BITS) - 1) << QFF_GLYPH_WIDTH_BITS)
+#define QFF_GLYPH_OFFSET_MASK (((1U << QFF_GLYPH_OFFSET_BITS) - 1) << QFF_GLYPH_WIDTH_BITS)
 
 typedef struct QP_PACKED qff_ascii_glyph_v1_t {
     uint32_t value : 24; // Uses QFF_GLYPH_*_(BITS|MASK) as bitfield ordering is compiler-defined
